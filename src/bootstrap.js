@@ -21,7 +21,7 @@ export default function bootstrap() {
           </mwc-icon>
         </a>
       `,
-      position: TOOL_POSITION.LEFT_END
+      position: TOOL_POSITION.FRONT_END
     }
   })
 
