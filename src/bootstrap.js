@@ -11,8 +11,9 @@ export default function bootstrap() {
     type: APPEND_APP_TOOL,
     tool: {
       template: html`
-        <a href="">
+        <a href="" style="color:inherit;">
           <mwc-icon
+            style="vertical-align:middle;"
             @click=${() => {
               location.href = 'setting'
             }}
