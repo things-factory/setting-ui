@@ -60,7 +60,7 @@ class SettingUiMain extends connect(store)(PageView) {
   }
 
   stateChanged(state) {
-    this._email = state.auth.user.email
+    this._email = state.auth.user && state.auth.user.email
     this._settings = state.setting.settings
   }
 
