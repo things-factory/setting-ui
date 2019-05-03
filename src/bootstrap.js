@@ -2,7 +2,6 @@ import { html } from 'lit-element'
 import { store } from '@things-factory/shell'
 import { APPEND_APP_TOOL, TOOL_POSITION } from '@things-factory/layout-base'
 import { ADD_SETTING } from '@things-factory/setting-base'
-import settingUi from './reducers/main'
 
 import '@material/mwc-icon/mwc-icon'
 
@@ -11,13 +10,8 @@ export default function bootstrap() {
     type: APPEND_APP_TOOL,
     tool: {
       template: html`
-        <a href="" style="color:inherit;">
-          <mwc-icon
-            style="vertical-align:middle;"
-            @click=${() => {
-              location.href = 'setting'
-            }}
-          >
+        <a href="setting" style="color:inherit;">
+          <mwc-icon style="vertical-align:middle;">
             settings
           </mwc-icon>
         </a>
@@ -31,9 +25,5 @@ export default function bootstrap() {
     setting: {
       template: 'come and add more setting'
     }
-  })
-
-  store.addReducers({
-    settingUi
   })
 }

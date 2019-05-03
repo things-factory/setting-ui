@@ -17,8 +17,11 @@ class SettingUiMain extends connect(store)(PageView) {
     `
   }
 
-  stateChanged(state) {
-    this.settingUi = state.settingUi.state_main
+  get context() {
+    return {
+      title: 'Setting',
+      printable: this
+    }
   }
 }
 
