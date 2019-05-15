@@ -1,5 +1,5 @@
-import route from './src/route'
-import bootstrap from './src/bootstrap'
+import route from './client/route'
+import bootstrap from './client/bootstrap'
 
 export default {
   route,

@@ -1,14 +1,23 @@
 {
   "name": "@things-factory/setting-ui",
-  "version": "0.0.13",
-  "main": "src/index.js",
-  "browser": "src/index.js",
+  "version": "0.0.14",
+  "main": "dist-server/index.js",
+  "browser": "client/index.js",
   "things-factory": true,
   "license": "MIT",
   "author": "horwengliang95",
   "scripts": {
-    "build:dev": "webpack --config ./node_modules/@things-factory/shell/webpack.config.dev.js",
-    "serve:dev": "webpack-dev-server --config ./node_modules/@things-factory/shell/webpack.config.dev.js"
+    "serve": "things-factory",
+    "serve:dev": "npm run clean && tsc && things-factory-dev",
+    "build:client": "webpack --config node_modules/@things-factory/shell/webpack.config.js",
+    "build:server": "tsc",
+    "clean": "rm -rf dist-server dist-client",
+    "prepublish": "npm run clean && npm run build:server",
+    "migration": "things-factory-migration",
+    "migration:create": "node ./node_modules/typeorm/cli.js migration:create",
+    "migration:generate": "node ./node_modules/typeorm/cli.js migration:generate",
+    "migration:run": "node ./node_modules/typeorm/cli.js migration:run",
+    "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert"
   },
   "dependencies": {
     "@material/icon-button": "^1.1.0",
