@@ -15,7 +15,7 @@
     "clean:server": "rm -rf dist-server",
     "clean:client": "rm -rf dist-client",
     "clean": "npm run clean:server && npm run clean:client",
-    "prepublish": "npm run clean && npm run build:server",
+    "prepublish": "npm run build:server",
     "migration": "npm run build:server && things-factory-migration",
     "migration:create": "node ./node_modules/typeorm/cli.js migration:create",
     "migration:generate": "node ./node_modules/typeorm/cli.js migration:generate",
