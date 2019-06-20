@@ -33,8 +33,7 @@ class SettingUiMain extends connect(store)(PageView) {
 
   get context() {
     return {
-      title: 'Setting',
-      printable: this
+      title: 'Setting'
     }
   }
 }
