@@ -1,10 +1,10 @@
 import { html } from 'lit-element'
 import { connect } from 'pwa-helpers/connect-mixin.js'
+
 import { store, PageView } from '@things-factory/shell'
+import { i18next, localize } from '@things-factory/i18n-base'
 
-// import { i18next } from '@things-factory/shell/base/i18next'
-
-class SettingUiMain extends connect(store)(PageView) {
+class SettingUiMain extends connect(store)(localize(i18next)(PageView)) {
   static get properties() {
     return {
       _settings: Array
