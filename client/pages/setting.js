@@ -33,9 +33,9 @@ class SettingUiMain extends connect(store)(localize(i18next)(PageView)) {
 
   get context() {
     return {
-      title: 'Setting'
+      title: i18next.t('setting')
     }
   }
 }
 
-window.customElements.define('setting-main', SettingUiMain)
+window.customElements.define('setting-page', SettingUiMain)

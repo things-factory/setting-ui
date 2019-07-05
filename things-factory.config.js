@@ -5,7 +5,7 @@ export default {
   route,
   routes: [
     {
-      tagname: 'setting-main',
+      tagname: 'setting-page',
       page: 'setting'
     }
   ],
