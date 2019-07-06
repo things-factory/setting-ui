@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/setting-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -23,13 +23,12 @@
     "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert"
   },
   "dependencies": {
-    "@material/icon-button": "^1.1.0",
     "@things-factory/i18n-base": "*",
     "@things-factory/layout-base": "*",
     "@things-factory/setting-base": "*",
     "@things-factory/shell": "*"
   },
   "devDependencies": {
-    "@things-factory/tester": "^0.1.1"
+    "@things-factory/tester": "*"
   }
 }

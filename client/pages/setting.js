@@ -4,7 +4,7 @@ import { connect } from 'pwa-helpers/connect-mixin.js'
 import { store, PageView } from '@things-factory/shell'
 import { i18next, localize } from '@things-factory/i18n-base'
 
-class SettingUiMain extends connect(store)(localize(i18next)(PageView)) {
+class SettingPage extends connect(store)(localize(i18next)(PageView)) {
   static get properties() {
     return {
       _settings: Array
@@ -17,13 +17,11 @@ class SettingUiMain extends connect(store)(localize(i18next)(PageView)) {
     })
 
     return html`
-      <div>
-        ${_sortedSettings.map(
-          setting => html`
-            ${setting.template}
-          `
-        )}
-      </div>
+      ${_sortedSettings.map(
+        setting => html`
+          ${setting.template}
+        `
+      )}
     `
   }
 
@@ -38,4 +36,4 @@ class SettingUiMain extends connect(store)(localize(i18next)(PageView)) {
   }
 }
 
-window.customElements.define('setting-page', SettingUiMain)
+window.customElements.define('setting-page', SettingPage)
