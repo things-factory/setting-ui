@@ -2,22 +2,23 @@ import { html } from 'lit-element'
 
 import '@material/mwc-icon'
 
-import { store } from '@things-factory/shell'
-import { TOOL_POSITION } from '@things-factory/layout-base'
-import { APPEND_APP_TOOL } from '@things-factory/apptool-base'
+import { store, navigate } from '@things-factory/shell'
+import { ADD_MORENDA } from '@things-factory/more-base'
 
 export default function bootstrap() {
+  /* add user profile morenda */
   store.dispatch({
-    type: APPEND_APP_TOOL,
-    tool: {
-      template: html`
-        <a href="setting" style="color:inherit;">
-          <mwc-icon style="vertical-align:middle;">
-            settings
-          </mwc-icon>
-        </a>
+    type: ADD_MORENDA,
+    morenda: {
+      icon: html`
+        <mwc-icon>settings</mwc-icon>
       `,
-      position: TOOL_POSITION.FRONT_END
+      name: html`
+        <i18n-msg msgid="label.setting"></i18n-msg>
+      `,
+      action: () => {
+        navigate('setting')
+      }
     }
   })
 }
