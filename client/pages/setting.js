@@ -31,7 +31,7 @@ class SettingPage extends connect(store)(localize(i18next)(PageView)) {
 
   get context() {
     return {
-      title: i18next.t('setting')
+      title: i18next.t('title.setting')
     }
   }
 }
