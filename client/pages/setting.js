@@ -1,10 +1,20 @@
-import { html } from 'lit-element'
+import { html, css } from 'lit-element'
 import { connect } from 'pwa-helpers/connect-mixin.js'
 
 import { store, PageView } from '@things-factory/shell'
 import { i18next, localize } from '@things-factory/i18n-base'
 
 class SettingPage extends connect(store)(localize(i18next)(PageView)) {
+  static get styles() {
+    return [
+      css`
+        :host {
+          overflow-y: auto;
+        }
+      `
+    ]
+  }
+
   static get properties() {
     return {
       _settings: Array
