@@ -10,6 +10,7 @@ class SettingPage extends connect(store)(localize(i18next)(PageView)) {
       css`
         :host {
           overflow-y: auto;
+          background-color: var(--setting-background);
         }
         div {
           margin: var(--setting-icon-margin);
