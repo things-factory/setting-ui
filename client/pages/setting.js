@@ -11,6 +11,11 @@ class SettingPage extends connect(store)(localize(i18next)(PageView)) {
         :host {
           overflow-y: auto;
         }
+        div {
+          margin: var(--setting-icon-margin);
+          height: var(--setting-icon-height);
+          background: url(../assets/images/icon-setting.png) center top no-repeat;
+        }
       `
     ]
   }
@@ -27,6 +32,7 @@ class SettingPage extends connect(store)(localize(i18next)(PageView)) {
     })
 
     return html`
+      <div class="page-icon"></div>
       ${_sortedSettings.map(
         setting => html`
           ${setting.template}
