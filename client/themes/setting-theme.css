@@ -1,0 +1,18 @@
+body {
+  --setting-background: var(--main-section-background-color);
+
+  --setting-title-font: var(--subtitle-font);
+  --setting-title-color: var(--subtitle-text-color);
+
+  --setting-content-padding: 15px;
+  --setting-content-font: normal 1em/1em var(--theme-font);
+
+  --setting-info-content-padding: 10px 15px;
+  --setting-info-background-color: #f0f0f0;
+  --setting-info-font: normal 14px/14px var(--theme-font);
+  --setting-info-color: #666;
+  --setting-info-appname-color: var(--primary-color);
+
+  --setting-icon-height: 170px;
+  --setting-icon-margin: 7% 0 5px 0;
+}
