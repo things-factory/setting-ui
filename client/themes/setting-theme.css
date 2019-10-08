@@ -14,5 +14,5 @@ body {
   --setting-info-appname-color: var(--primary-color);
 
   --setting-icon-height: 170px;
-  --setting-icon-margin: 7% 0 5px 0;
+  --setting-icon-margin: 40px 0 5px 0;
 }
