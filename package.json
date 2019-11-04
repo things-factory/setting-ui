@@ -29,6 +29,6 @@
     "@things-factory/shell": "^1.0.0-alpha.1"
   },
   "devDependencies": {
-    "@things-factory/tester": "*"
+    "@things-factory/tester": "^1.0.0-alpha.1"
   }
 }
