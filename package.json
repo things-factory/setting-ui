@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/setting-ui",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
