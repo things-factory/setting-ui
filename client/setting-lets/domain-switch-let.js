@@ -8,13 +8,12 @@ export class DomainSwitchLet extends connect(store)(LitElement) {
   static get properties() {
     return {
       domains: Array,
-      domain: Object
+      contextPath: String,
+      subdomain: String
     }
   }
 
   render() {
-    var domain = this.domain || {}
-
     return html`
       <setting-let>
         <i18n-msg slot="title" msgid="title.switch domain"></i18n-msg>
@@ -22,9 +21,7 @@ export class DomainSwitchLet extends connect(store)(LitElement) {
         <select slot="content" @change=${e => navigate('/domain/' + e.target.value)}>
           ${this.domains.map(
             option => html`
-              <option value=${option.subdomain} ?selected=${domain.subdomain == option.subdomain}
-                >${option.name}</option
-              >
+              <option value=${option.subdomain} ?selected=${this.subdomain == option.subdomain}>${option.name}</option>
             `
           )}
         </select>
@@ -33,9 +30,9 @@ export class DomainSwitchLet extends connect(store)(LitElement) {
   }
 
   stateChanged(state) {
-    var user = state.auth.user
+    this.contextPath = state.app.contextPath
     this.domains = state.app.domains
-    this.domain = user ? user.domain : null
+    this.subdomain = this.contextPath.split('/')[2]
   }
 }
 
