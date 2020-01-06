@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/setting-ui",
-  "version": "0.9.0",
+  "version": "1.0.0-alpha.6",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -23,12 +23,12 @@
     "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert"
   },
   "dependencies": {
-    "@things-factory/i18n-base": "^0.9.0",
-    "@things-factory/more-base": "^0.9.0",
-    "@things-factory/setting-base": "^0.9.0",
-    "@things-factory/shell": "^0.9.0"
+    "@things-factory/i18n-base": "^1.0.0-alpha.1",
+    "@things-factory/more-base": "^1.0.0-alpha.1",
+    "@things-factory/setting-base": "^1.0.0-alpha.1",
+    "@things-factory/shell": "^1.0.0-alpha.1"
   },
   "devDependencies": {
-    "@things-factory/tester": "*"
+    "@things-factory/tester": "^1.0.0-alpha.1"
   }
 }

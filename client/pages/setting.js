@@ -15,7 +15,7 @@ class SettingPage extends connect(store)(localize(i18next)(PageView)) {
         div {
           margin: var(--setting-icon-margin);
           height: var(--setting-icon-height);
-          background: url(../assets/images/icon-setting.png) center top no-repeat;
+          background: url(/assets/images/icon-setting.png) center top no-repeat;
         }
       `
     ]
