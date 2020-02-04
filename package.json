@@ -25,8 +25,7 @@
   "dependencies": {
     "@things-factory/i18n-base": "^2.0.0",
     "@things-factory/more-base": "^2.0.0",
-    "@things-factory/setting-base": "^2.0.0",
-    "@things-factory/shell": "^2.0.0"
+    "@things-factory/setting-base": "^2.0.0"
   },
   "devDependencies": {
     "@things-factory/tester": "^2.0.0"
